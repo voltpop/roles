@@ -1,0 +1,8 @@
+- name: Start Bitwarden
+  become: true
+  ansible.builtin.command: "/opt/{{ customer.name }}/bitwarden/bitwarden.sh start"
+  register: output
+
+- debug:
+    var: output
+
